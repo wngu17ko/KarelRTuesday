@@ -4,7 +4,7 @@
 
 require_relative "../karel/ur_robot"
 require_relative "../mixins/turner"
-# A class whose robots know how to sweep a short staircase of beepers
+#t A class whose robots know how to sweep a short staircase of beepers
 class StairSweeper < UrRobot
   include Turner
   def initialize (street, avenue, direction, beepers)
@@ -12,22 +12,20 @@ class StairSweeper < UrRobot
   end
   
   # climb one stair
-  def climb_stair
-    turn_left
+  def climb_stair()
+    turn_left() 
     move
-    turn_right
-    move
+    turn_right() 
+    turn_right() 
+    move() 
+
   end
   # sweep beepers from three stairs: one beeper per step
-  def sweep_stairs
-    climb_stair
-    pick_beeper
-    climb_stair
-    pick_beeper
-    climb_stair
-    pick_beeper
-    turn_off
-  end
+  def turn_right()
+   turn_left() 
+   turn_left() 
+   turn_left() 
+ end 
   
   # The standard task for this class of robots
  def run_task

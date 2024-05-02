@@ -6,59 +6,44 @@ require_relative "../karel/ur_robot"
 require_relative "../mixins/turner"
 # A class whose robots know how to sweep a short staircase of beepers
 class WilliamsRobot < UrRobot
- def turn_right 
+  include Turner 
 
-     turn_left; 
-     turn_left;
-     turn_left;
-end 
-def  reculer 
-     turn_left 
-     turn_left
+  def mettre_beeper ()
+     put_beeper 
      move 
+     move
+     put_beeper 
+     move
+     move
+     put_beeper 
+     move 
+     move
+     put_beeper   
+     turn_right 
+     move
+     turn_right
+     move
+     put_beeper 
+     turn_left
+     move
+     turn_right 
+     move
+     put_beeper 
+     turn_left
+     move
+     turn_right 
+     move
+     put_beeper 
+     turn_right 
+     move
      turn_left 
+     move 
+     put_beeper 
      turn_left 
-  end 
- def placer_5_beepers 
-   put_beeper 
-   move
-   put_beeper 
-   move
-   put_beeper 
-   move
-   put_beeper 
-   move
-   put_beeper 
-   move
-   
-end
+     move 
+     turn_right 
+     put_beeper
 
-def mettre_25_beepers () 
-  placer_5_beepers   
-  turn_right 
-   move 
-   turn_right
-   move 
-   placer_5_beepers
-   turn_left 
-   move 
-   turn_left 
-   move
-   placer_5_beepers 
-   turn_right 
-   move 
-   turn_right
-   move
-   placer_5_beepers 
-   turn_left 
-   move 
-   turn_left 
-   move 
-   placer_5_beepers  
-   turn_right 
-   move
-
-end
-
-
+       
+  end
 end
