@@ -9,41 +9,7 @@ class WilliamsRobot < UrRobot
   include Turner 
 
   def mettre_beeper ()
-     put_beeper 
-     move 
-     move
-     put_beeper 
-     move
-     move
-     put_beeper 
-     move 
-     move
-     put_beeper   
-     turn_right 
-     move
-     turn_right
-     move
-     put_beeper 
-     turn_left
-     move
-     turn_right 
-     move
-     put_beeper 
-     turn_left
-     move
-     turn_right 
-     move
-     put_beeper 
-     turn_right 
-     move
-     turn_left 
-     move 
-     put_beeper 
-     turn_left 
-     move 
-     turn_right 
-     put_beeper
-
+      
        
   end
 end
