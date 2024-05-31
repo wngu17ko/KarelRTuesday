@@ -5,18 +5,119 @@
 $graphical = true
 require_relative "taches_som"
 require_relative "../karel/ur_robot"
-require_relative "../mixins/sensor_pack"
-
 # a task for a stair sweeper
 def task() 
  world = Robota::World
- world.read_world("../karel/toit.kwld")
-  karel = TachesSomm.new(2, 6, Robota::EAST,INFINITY)
-  karel.move_left(4)
-  karel.move_left(5) 
-  karel.move_left(3) 
-  karel.move_right
-  
+ world.read_world("../karel/toit2.kwld")
+ karel = TachesSommq2.new(5, 5, Robota::EAST,INFINITY)
+ karel.pick_beeper
+ karel.move 
+ karel.pick_beeper 
+ karel.move 
+ karel.pick_beeper 
+ karel.move 
+ karel.pick_beeper 
+ karel.turn_left 
+ karel.move 
+ karel.pick_beeper 
+ karel.move 
+ karel.pick_beeper
+ karel.turn_left
+ karel.move 
+ karel.pick_beeper 
+ karel.move 
+ karel.pick_beeper
+ karel.move 
+ karel.pick_beeper
+ karel.turn_left 
+ karel.move 
+ karel.pick_beeper 
+ karel.turn_left 
+ karel.move 
+ karel.pick_beeper 
+ karel.move 
+ karel.pick_beeper 
+ karel.turn_right 
+ karel.move 
+ karel.turn_right 
+ karel.move 
+ karel.turn_left 
+ karel.move 
+ 3.times {karel.move}
+ karel.turn_left 
+ 3.times {karel.move} 
+ karel.turn_left 
+ karel.move 
+ karel.put_beeper 
+ karel.move
+ karel.put_beeper 
+ karel.turn_right 
+ karel.move 
+ karel.put_beeper 
+ karel.turn_right  
+ karel.move 
+ karel.turn_right 
+ karel.move 
+ karel.turn_left 
+ karel.move
+ karel.turn_right 
+ 6.times {karel.move}
+ karel.turn_right 
+ karel.move 
+ karel.put_beeper 
+ karel.move 
+ karel.put_beeper 
+ karel.turn_left 
+ karel.move 
+ karel.put_beeper
+ karel.turn_left 
+ karel.move 
+ karel.turn_left 
+ karel.move 
+ karel.turn_right 
+ karel.move 
+ karel.turn_left 
+ karel.move 
+ karel.turn_left 
+ 8.times {karel.move}
+ karel.turn_left 
+ 2.times {karel.move} 
+ karel.turn_right 
+ karel.move 
+ karel.put_beeper 
+ karel.move 
+ karel.put_beeper 
+ karel.turn_right 
+ karel.move
+ karel.put_beeper 
+ karel.turn_right 
+ karel.move 
+ karel.turn_right
+ karel.move 
+ karel.turn_left 
+ karel.move 
+ karel.turn_left
+ 7.times {karel.move}
+ karel.turn_left 
+ karel.move 
+ karel.move 
+ karel.put_beeper
+ karel.turn_right 
+ karel.move 
+ karel.put_beeper 
+ karel.turn_right 
+ karel.move 
+ karel.put_beeper
+ karel.turn_right 
+ karel.move 
+ karel.turn_left 
+ karel.move 
+ 5.times {karel.move} 
+ karel.turn_right 
+ 3.times {karel.move} 
+ karel.turn_right 
+ karel.move 
+ karel.move
 
  
 end
@@ -32,7 +133,5 @@ if __FILE__ == $0
      end
    else
      task
-   end 
  end
-   
-   
+end   
