@@ -30,4 +30,4 @@ def  reculer
    move
    put_beeper 
    move  
-end
+ end 
