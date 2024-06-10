@@ -5,4 +5,4 @@ secondes = gets.chomp.to_i
  minutes = secondes_en_minutes / 60 
  secondes_en_secondes = secondes_en_minutes % 60 
  secondes = secondes_en_secondes / 60 
- puts "#{heures} heures, #{minutes} minutes, #{secondes} secondes."
+ puts "#{heures} heures, #{minutes} minutes, #{secondes_en_secondes} secondes."
