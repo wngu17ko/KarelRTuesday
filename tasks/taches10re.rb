@@ -3,8 +3,8 @@
 #License: Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License
 
 $graphical = true
+require_relative "taches10n1"
 
-require_relative "williams_robot"
 
 
 # a task for a stair sweeper
@@ -13,8 +13,9 @@ def task()
  world.read_world("../karel/neige (1).kwld")
   
   
-  karel = WilliamsRobot.new(10, 2, Robota::EAST, 32)
- 
+  karel = Taches10n1.new(10, 2, Robota::EAST, 32)
+  
+
 end
      
 

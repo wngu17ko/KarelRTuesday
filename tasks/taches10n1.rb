@@ -4,14 +4,14 @@
 
 $graphical = true
 
-
+require_relative "taches10re"
 
 
 # a task for a stair sweeper
 def task()
   
   
-  karel = WilliamsRobot.new(2, 8, Robota::EAST, 10)
+  karel = Taches10n1.new(2, 8, Robota::EAST, 10)
 
 karel.mettre_beeper 
 
