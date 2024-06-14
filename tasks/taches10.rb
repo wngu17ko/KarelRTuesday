@@ -5,7 +5,7 @@
 $graphical = true
 
 require_relative "deux_bloc_robot"
-class RobotFaceNord < UrRobot
+class Taches10re < UrRobot
   include Turner
   def initialize (street, avenue, direction, beepers)
     super(street, avenue, direction, beepers)
